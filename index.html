@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Digitales Integrales</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="img/lumina.png" alt="Lumina Logo" style="height: 60px;">
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/lumina.png" alt="Lumina Logo" class="logo-img"> Lumina Creaciones
+            </div>
+            <div class="hamburguesa" id="hamburger">
+                <i class='bx bx-menu'></i>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+                <li><a href="#sitios" class="nav-link">Sitios Web</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="badge">Nuevas Tendencias 2026</span>
+            <h1 class="hero-title">Experiencias que <br><span class="text-gradient">brillan.</span></h1>
+            <div class="tagline-container">
+                <p id="rotating-tagline">Digital. Vibrante. Inolvidable.</p>
+            </div>
+            <div class="hero-buttons">
+                <a class="btn btn-primary" href="https://wa.me/5493757322079" target="_blank">
+                    <i class='bx bxl-whatsapp'></i> Consultar ahora
+                </a>
+                <a class="btn btn-outline" href="#modelos">
+                    Ver modelos
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="img/lumina2.png" alt="Hero Lumina" class="hero-img">
+            <div class="glow-effect"></div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section id="beneficios">
+        <div class="section-header">
+            <h2>¿Por qué elegirnos?</h2>
+            <p>Todo lo que necesitas para tu evento en un solo lugar</p>
+        </div>
+        <div class="grid benefits-grid">
+            <div class="card benefit-card">
+                <div class="icon-box"><i class='bx bx-mobile-alt'></i></div>
+                <h3>100% Mobile</h3>
+                <p>Diseño responsivo que se adapta perfectamente a cualquier pantalla de celular.</p>
+            </div>
+            <div class="card benefit-card">
+                <div class="icon-box"><i class='bx bx-music'></i></div>
+                <h3>Experiencia Sensorial</h3>
+                <p>Música de fondo y galería de fotos interactiva para emocionar a tus invitados.</p>
+            </div>
+            <div class="card benefit-card">
+                <div class="icon-box"><i class='bx bx-map'></i></div>
+                <h3>Ubicación Exacta</h3>
+                <p>Integración con Google Maps para que nadie se pierda en el camino.</p>
+            </div>
+            <div class="card benefit-card">
+                <div class="icon-box"><i class='bx bx-check-circle'></i></div>
+                <h3>Confirmación Instantánea</h3>
+                <p>Sistema de confirmación directo a tu WhatsApp. Rápido y organizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODELOS -->
+    <section id="modelos" class="bg-alt">
+        <div class="section-header">
+            <h2>Nuestros Modelos</h2>
+            <p>Elige el estilo que mejor se adapte a tu celebración</p>
+        </div>
+        <div class="grid models-grid">
+            <div class="card model-card">
+                <div class="card-image-container">
+                    <img class="card-image" src="img/BasicoTJ.png" alt="Vista previa modelo basica">
+                </div>
+                <div class="card-body">
+                    <h3>Básica</h3>
+                    <p>Ideal para reuniones íntimas. Simple, elegante y con la información esencial.</p>
+                    <a class="btn-text" href="https://invbasica.netlify.app/" target="_blank">Ver demo <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+            <div class="card model-card featured">
+                <div class="label-featured">Más Popular</div>
+                <div class="card-image-container">
+                    <img class="card-image" src="img/Premium.png" alt="Vista previa modelo premium">
+                </div>
+                <div class="card-body">
+                    <h3>Premium</h3>
+                    <p>La favorita. Incluye galería de fotos, cuenta regresiva y música personalizada.</p>
+                    <a class="btn-text" href="https://invpremium.netlify.app/" target="_blank">Ver demo <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+            <div class="card model-card">
+                <div class="card-image-container">
+                    <img class="card-image" src="img/Gold.png" alt="Vista previa modelo gold">
+                </div>
+                <div class="card-body">
+                    <h3>Gold</h3>
+                    <p>Para eventos inolvidables. Animaciones exclusivas y sección de regalos.</p>
+                    <a class="btn-text" href="https://invgold.netlify.app/" target="_blank">Ver demo <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="productos.html" class="btn btn-primary">
+                Ver todos los productos <i class='bx bx-grid-alt'></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- SITIOS WEB -->
+    <section id="sitios">
+        <div class="section-header">
+            <h2>Sitios Web a Medida</h2>
+            <p>Además de invitaciones, creamos sitios web modernos y rápidos para marcas y eventos.</p>
+        </div>
+
+        <div class="grid web-options-grid">
+            <div class="card web-option-card">
+                <div class="icon-box"><i class='bx bx-rocket'></i></div>
+                <h3>Landing Express</h3>
+                <p>Una sola página potente para lanzar tu idea, captar leads y vender rápido.</p>
+                <ul class="web-features">
+                    <li><i class='bx bx-check-circle'></i> Copy persuasivo</li>
+                    <li><i class='bx bx-check-circle'></i> Animaciones elegantes</li>
+                    <li><i class='bx bx-check-circle'></i> Integración con WhatsApp</li>
+                </ul>
+            </div>
+            <div class="card web-option-card featured">
+                <div class="label-featured">Más pedido</div>
+                <div class="icon-box"><i class='bx bx-building-house'></i></div>
+                <h3>Sitio Corporativo</h3>
+                <p>Tu marca, profesional y confiable. Secciones claras, identidad y contacto.</p>
+                <ul class="web-features">
+                    <li><i class='bx bx-check-circle'></i> Diseño a medida</li>
+                    <li><i class='bx bx-check-circle'></i> Optimizado para SEO</li>
+                    <li><i class='bx bx-check-circle'></i> Performance premium</li>
+                </ul>
+            </div>
+            <div class="card web-option-card">
+                <div class="icon-box"><i class='bx bx-shopping-bag'></i></div>
+                <h3>Catálogo Digital</h3>
+                <p>Muestra tus productos con estilo, categorías y llamados a la acción.</p>
+                <ul class="web-features">
+                    <li><i class='bx bx-check-circle'></i> Galería atractiva</li>
+                    <li><i class='bx bx-check-circle'></i> Filtros simples</li>
+                    <li><i class='bx bx-check-circle'></i> Pedido rápido</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-subheader">
+            <h3>Ejemplos de Sitios</h3>
+            <p>Explora algunos proyectos reales con el mismo estilo visual que ofrecemos.</p>
+        </div>
+
+        <div class="grid web-showcase-grid">
+            <div class="card web-card">
+                <div class="card-image-container">
+                    <img class="card-image" src="img/IronZone.png" alt="Vista previa sitio Iron Zone">
+                </div>
+                <div class="card-body">
+                    <h3>Iron Zone</h3>
+                    <p>Landing creativa con hero impactante y secciones claras.</p>
+                    <a class="btn-text" href="https://castillocris.github.io/Gimnacio/" target="_blank">Ver sitio <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+            <div class="card web-card">
+                <div class="card-image-container">
+                    <img class="card-image" src="img/ClubDelAsado.png" alt="Vista previa sitio Club del Asado">
+                </div>
+                <div class="card-body">
+                    <h3>Club del Asado</h3>
+                    <p>Web elegante para venta de asado argentino.</p>
+                    <a class="btn-text" href="https://castillocris.github.io/El-Club-del-Asado/" target="_blank">Ver sitio <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+            <div class="card web-card">
+                <div class="card-image-container">
+                    <img class="card-image" src="img/Tienda Nancy.png" alt="Vista previa sitio Tienda Nancy">
+                </div>
+                <div class="card-body">
+                    <h3>Tienda Nancy</h3>
+                    <p>Tienda de ropa para toda la familia, con catalogo y pedidos online.</p>
+                    <a class="btn-text" href="https://castillocris.github.io/Tienda-Nancy/" target="_blank">Ver sitio <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="bg-alt">
+        <div class="section-header">
+            <h2>Servicios Creativos a Medida</h2>
+            <p>Sumamos piezas visuales que elevan tu evento y refuerzan tu identidad.</p>
+        </div>
+        <div class="grid services-grid">
+            <div class="card service-card">
+                <img class="card-image service-image" src="https://images.unsplash.com/photo-1764557222299-5cce88abe80c?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1200" alt="Edicion profesional de fotos">
+                <div class="icon-box"><i class='bx bx-photo-album'></i></div>
+                <h3>Edición de Fotos</h3>
+                <p>Retoque pro, color coherente y estilo uniforme para álbumes, invitaciones y redes.</p>
+                <ul class="service-features">
+                    <li><i class='bx bx-check-circle'></i> Corrección de color</li>
+                    <li><i class='bx bx-check-circle'></i> Retoque natural</li>
+                    <li><i class='bx bx-check-circle'></i> Entrega optimizada</li>
+                </ul>
+                <a class="btn-text" href="https://wa.me/5493757322079" target="_blank">Consultar <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="card service-card featured">
+                <div class="label-featured">Más solicitado</div>
+                <img class="card-image service-image" src="https://images.unsplash.com/photo-1759417501276-a309088f1521?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1200" alt="Edicion profesional de videos">
+                <div class="icon-box"><i class='bx bx-video-plus'></i></div>
+                <h3>Edición de Videos</h3>
+                <p>Reels, clips emotivos y resúmenes con ritmo, música y transiciones limpias.</p>
+                <ul class="service-features">
+                    <li><i class='bx bx-check-circle'></i> Ritmo narrativo</li>
+                    <li><i class='bx bx-check-circle'></i> Música y cortes</li>
+                    <li><i class='bx bx-check-circle'></i> Formatos para redes</li>
+                </ul>
+                <a class="btn-text" href="https://wa.me/5493757322079" target="_blank">Consultar <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <div class="card service-card">
+                <img class="card-image service-image" src="https://images.unsplash.com/photo-1759124650162-00cb97c7db31?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=1200" alt="Invitaciones personalizadas para cumpleaños">
+                <div class="icon-box"><i class='bx bx-cake'></i></div>
+                <h3>Invitaciones Cumpleaños</h3>
+                <p>Diseños personalizados, temáticas únicas y versión mobile lista para compartir.</p>
+                <ul class="service-features">
+                    <li><i class='bx bx-check-circle'></i> Temática a elección</li>
+                    <li><i class='bx bx-check-circle'></i> Datos editables</li>
+                    <li><i class='bx bx-check-circle'></i> Link listo para enviar</li>
+                </ul>
+                <a class="btn-text" href="https://wa.me/5493757322079" target="_blank">Consultar <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contacto">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>¿Listo para empezar?</h2>
+                <p>Sorprende a tus invitados con una invitación única. Entrega en 24/48hs.</p>
+                <a class="btn btn-white" href="https://wa.me/5493757322079" target="_blank">
+                    <i class='bx bxl-whatsapp'></i> Escribinos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Lumina Creaciones Digitales. Todos los derechos reservados.</p>
+            <div class="socials">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
+    <script src="js/animations.js" defer></script>
+</body>
+</html>
+
