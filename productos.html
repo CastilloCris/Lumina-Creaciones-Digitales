@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Productos | Lumina Creaciones</title>
+    <title>Catálogo | Lumina Creaciones Digitales</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,6 +84,24 @@
             <button class="filter-btn" data-filter="invitacion">Invitaciones</button>
             <button class="filter-btn" data-filter="romantica">Románticas</button>
             <button class="filter-btn" data-filter="web">Sitios Web</button>
+        </div>
+
+        <div class="category-info-container">
+            <div id="info-all" class="category-info active">
+                <p>Explora nuestra gama completa de soluciones digitales. Desde eventos sociales hasta presencia profesional en la web, en Lumina transformamos tus ideas en experiencias inolvidables.</p>
+            </div>
+            <div id="info-invitacion" class="category-info">
+                <h3>Invitaciones Digitales</h3>
+                <p>Revoluciona tus eventos con invitaciones interactivas. Incluyen confirmación de asistencia vía WhatsApp, ubicación GPS en tiempo real, cuenta regresiva y música personalizada. Una forma ecológica, moderna y eficiente de invitar a tus seres queridos.</p>
+            </div>
+            <div id="info-romantica" class="category-info">
+                <h3>Tarjetas Virtuales Interactivas</h3>
+                <p>Lleva tus sentimientos al mundo digital con nuestras tarjetas románticas interactivas. Diseñadas con galerías de fotos, mensajes animados y canciones especiales, son el regalo perfecto y original para aniversarios, cumpleaños o simplemente para decir "te amo" de una manera única.</p>
+            </div>
+            <div id="info-web" class="category-info">
+                <h3>Páginas Web Profesionales</h3>
+                <p>Potencia tu marca o negocio con un sitio web de alto impacto. Creamos desde Landing Pages optimizadas para conversión hasta E-commerce elegantes y funcionales. Diseños adaptables a móviles, rápidos y con una estética premium que garantiza el impacto visual.</p>
+            </div>
         </div>
 
         <div class="product-grid" id="product-grid">
@@ -190,6 +208,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const filters = document.querySelectorAll('.filter-btn');
             const cards = document.querySelectorAll('.card');
+            const infoBlocks = document.querySelectorAll('.category-info');
 
             filters.forEach(filter => {
                 filter.addEventListener('click', () => {
@@ -198,6 +217,27 @@
                     filter.classList.add('active');
 
                     const category = filter.getAttribute('data-filter');
+
+                    // Update category info visibility
+                    infoBlocks.forEach(info => {
+                        if (info.id === `info-${category}`) {
+                            gsap.to(info, {
+                                display: 'block',
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.5,
+                                ease: 'power2.out'
+                            });
+                        } else {
+                            gsap.to(info, {
+                                display: 'none',
+                                opacity: 0,
+                                y: 10,
+                                duration: 0.3,
+                                ease: 'power2.in'
+                            });
+                        }
+                    });
 
                     cards.forEach(card => {
                         const cardCategory = card.getAttribute('data-category');

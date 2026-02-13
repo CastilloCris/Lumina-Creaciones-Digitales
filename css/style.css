@@ -406,17 +406,153 @@ section {
 }
 
 /* Cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .card {
     background: var(--negro-claro);
-    border-radius: 20px;
-    padding: 30px;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                box-shadow 0.4s ease, 
-                border-color 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Web Card Specifics to prevent deformation */
+.web-card {
+    padding: 20px;
+}
+
+.web-card .card-image-container {
+    height: 200px;
+    border-radius: 12px;
+}
+
+.web-card .card-body {
+    padding: 15px 10px;
+}
+
+/* Beneficios / Services Specifics */
+.benefit-card {
+    text-align: center;
+}
+
+.benefit-card .icon-box {
+    margin: 0 auto 20px;
+}
+
+.benefit-card p {
+    color: var(--gris);
+    font-size: 0.95rem;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-card .card-image-container {
+    height: 250px;
+}
+
+.service-card .icon-box {
+    margin: -30px auto 20px;
+    position: relative;
+    z-index: 5;
+    background: var(--negro-claro);
+    border: 1px solid rgba(30, 144, 255, 0.3);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(30, 144, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--azul);
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.card:hover .icon-box {
+    transform: scale(1.1) rotate(10deg);
+    background: rgba(30, 144, 255, 0.2);
+}
+
+/* Model Cards specific styles */
+.model-card .card-image-container {
+    height: 220px;
+    border-radius: 16px;
+}
+
+.card-body {
+    padding: 10px 0 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.card-body p {
+    margin-bottom: 20px;
+    flex: 1;
+    color: var(--gris-claro);
+}
+
+.service-features {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--gris-claro);
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+}
+
+.service-features i {
+    color: var(--azul);
+    margin-right: 8px;
+}
+
+/* Hover Effects for all cards */
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(30, 144, 255, 0.2);
+    border-color: rgba(30, 144, 255, 0.4);
 }
 
 .card::before {
@@ -431,7 +567,7 @@ section {
                 transparent 60%);
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: -1;
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -439,151 +575,59 @@ section {
     opacity: 1;
 }
 
-.card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 50px -12px rgba(30, 144, 255, 0.4);
-    border-color: rgba(30, 144, 255, 0.4);
-}
-
-.card-image-container {
+.card > * {
     position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    z-index: 2;
 }
 
-.card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+.card:hover .card-image {
+    transform: scale(1.1);
 }
 
-/* Benefit Cards */
-.benefit-card {
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 140px;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+}
+
+/* Section Header styling */
+.category-info-container {
+    max-width: 800px;
+    margin: 0 auto 50px;
     text-align: center;
+    padding: 0 20px;
 }
 
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background: rgba(30, 144, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 28px;
+.category-info {
+    display: none;
+}
+
+.category-info.active {
+    display: block;
+}
+
+.category-info h3 {
     color: var(--azul);
-    transition: transform 0.4s ease, background 0.4s ease;
-}
-
-.card:hover .icon-box {
-    transform: scale(1.1) rotate(10deg);
-    background: rgba(30, 144, 255, 0.2);
-}
-
-.benefit-card h3 {
     margin-bottom: 15px;
+    font-size: 1.8rem;
 }
 
-.benefit-card p {
-    color: var(--gris);
-    font-size: 0.95rem;
-}
-
-/* Model Cards */
-.model-card {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.model-card .card-image {
-    height: 220px;
-    border-radius: 20px 20px 0 0;
-}
-
-.card-body {
-    padding: 25px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-body p {
-    margin-bottom: 20px;
-    flex: 1;
-}
-
-.web-option-card .icon-box {
-    margin: 0 0 20px;
-}
-
-.web-option-card p {
-    color: var(--gris);
-    margin-bottom: 20px;
-}
-
-.service-card {
-    text-align: center;
-}
-
-.service-image {
-    border-radius: 16px;
-    margin-bottom: 18px;
-}
-
-.service-card p {
-    color: var(--gris);
-    margin-bottom: 20px;
-}
-
-.service-features {
-    display: grid;
-    gap: 10px;
-    margin-bottom: 20px;
+.category-info p {
     color: var(--gris-claro);
-    font-size: 0.95rem;
-}
-
-.service-features i {
-    color: var(--azul);
-    margin-right: 8px;
-}
-
-.model-card .card-image {
-    border-radius: 20px 20px 0 0;
-}
-
-.web-card .card-image {
-    border-radius: 14px;
-}
-
-.web-features {
-    display: grid;
-    gap: 10px;
-    color: var(--gris-claro);
-    font-size: 0.95rem;
-}
-
-.web-features i {
-    color: var(--azul);
-    margin-right: 8px;
-}
-
-.web-card .card-body {
-    padding-top: 20px;
-}
-
-.section-subheader {
-    text-align: center;
-    margin: 70px auto 40px;
-    max-width: 650px;
-}
-
-.section-subheader p {
-    color: var(--gris);
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .featured {
