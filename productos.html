@@ -1,314 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | Lumina Creaciones Digitales</title>
-    <meta name="description" content="Explora nuestro catálogo de invitaciones interactivas, sitios web profesionales y tarjetas virtuales románticas. Diseños premium para cada ocasión.">
-    <meta name="keywords" content="catálogo de productos digitales, invitaciones interactivas, sitios web para eventos, tarjetas virtuales románticas, lumina creaciones">
-    <link rel="canonical" href="https://castillocris.github.io/Lumina-Creaciones-Digitales/productos.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Lúmina Creaciones Digitales</title>
+  <meta name="description" content="Portfolio de Lúmina: invitaciones digitales interactivas, webs personalizadas y edición de imágenes/video." />
+  <link rel="canonical" href="https://castillocris.github.io/Lumina-Creaciones-Digitales/productos.html" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://castillocris.github.io/Lumina-Creaciones-Digitales/productos.html">
-    <meta property="og:title" content="Catálogo de Productos | Lumina">
-    <meta property="og:description" content="Explora nuestro catálogo de invitaciones interactivas, sitios web profesionales y tarjetas virtuales románticas. Diseños premium para cada ocasión.">
-    <meta property="og:image" content="https://castillocris.github.io/Lumina-Creaciones-Digitales/img/lumina2.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://castillocris.github.io/Lumina-Creaciones-Digitales/productos.html">
-    <meta property="twitter:title" content="Catálogo de Productos | Lumina">
-    <meta property="twitter:description" content="Explora nuestro catálogo de invitaciones interactivas, sitios web profesionales y tarjetas virtuales románticas. Diseños premium para cada ocasión.">
-    <meta property="twitter:image" content="https://castillocris.github.io/Lumina-Creaciones-Digitales/img/lumina2.png">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Invitaciones Digitales Interactivas",
-          "description": "Invitaciones con confirmación vía WhatsApp, GPS y música."
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Sitios Web Profesionales",
-          "description": "Landings y sitios corporativos con diseño premium."
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Tarjetas Virtuales Románticas",
-          "description": "Detalles digitales únicos para momentos especiales."
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Fonts -->
-     <link rel="shortcut icon" href="img/lumina.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .filter-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
-        .filter-btn {
-            padding: 10px 25px;
-            border-radius: 50px;
-            background: rgba(30, 144, 255, 0.1);
-            color: var(--azul);
-            border: 1px solid rgba(30, 144, 255, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--azul);
-            color: white;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 30px;
-            color: var(--gris);
-        }
-        .back-btn:hover {
-            color: var(--azul);
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <!-- Scroll Progress -->
-    <div id="scroll-progress"></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
 
-    <nav id="navbar" class="scrolled">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
-                    <img src="img/lumina.png" alt="Lumina Logo" class="logo-img"> Lumina Creaciones
-                </a>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="index.html#contacto" class="btn-nav">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav id="navbar" class="navbar scrolled">
+    <a class="brand" href="index.html" aria-label="Volver al inicio">
+      <img src="img/lumina.png" alt="Lúmina" class="brand-logo" />
+      <span class="brand-name">Lúmina</span>
+    </a>
+    <div class="menu" style="position: static; transform:none; opacity:1; pointer-events:auto; border:none; background:transparent; padding:0;">
+      <ul>
+        <li><a class="nav-link" href="index.html#invitaciones">Invitaciones</a></li>
+        <li><a class="nav-link" href="index.html#webs">Webs</a></li>
+        <li><a class="nav-link" href="index.html#edicion">Edición</a></li>
+        <li><a class="nav-link btn-nav" href="index.html#contacto">Contactar</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section style="padding-top: 150px;">
-        <a href="index.html" class="back-btn"><i class='bx bx-left-arrow-alt'></i> Volver al inicio</a>
-        
-        <div class="section-header">
-            <h1>Nuestro <span class="text-gradient">Catálogo</span></h1>
-            <p>Explora todas nuestras soluciones digitales diseñadas para brillar.</p>
-        </div>
+  <main class="section" style="padding-top:120px;">
+    <div class="section-header">
+      <h1>Portfolio <span class="text-gradient">Lúmina</span></h1>
+      <p>Ejemplos visuales para inspirarte. Si querés algo similar, lo hacemos a tu medida.</p>
+      <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btn-outline" href="#inv">Invitaciones</a>
+        <a class="btn btn-outline" href="#webs">Webs</a>
+        <a class="btn btn-outline" href="#edi">Edición</a>
+        <a class="btn btn-primary" href="index.html#contacto">Pedir presupuesto</a>
+      </div>
+    </div>
 
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="invitacion">Invitaciones</button>
-            <button class="filter-btn" data-filter="romantica">Románticas</button>
-            <button class="filter-btn" data-filter="web">Sitios Web</button>
-        </div>
-
-        <div class="category-info-container">
-            <div id="info-all" class="category-info active">
-                <p>Explora nuestra gama completa de soluciones digitales. Desde eventos sociales hasta presencia profesional en la web, en Lumina transformamos tus ideas en experiencias inolvidables.</p>
-            </div>
-            <div id="info-invitacion" class="category-info">
-                <h3>Invitaciones Digitales</h3>
-                <p>Revoluciona tus eventos con invitaciones interactivas. Incluyen confirmación de asistencia vía WhatsApp, ubicación GPS en tiempo real, cuenta regresiva y música personalizada. Una forma ecológica, moderna y eficiente de invitar a tus seres queridos.</p>
-            </div>
-            <div id="info-romantica" class="category-info">
-                <h3>Tarjetas Virtuales Interactivas</h3>
-                <p>Lleva tus sentimientos al mundo digital con nuestras tarjetas románticas interactivas. Diseñadas con galerías de fotos, mensajes animados y canciones especiales, son el regalo perfecto y original para aniversarios, cumpleaños o simplemente para decir "te amo" de una manera única.</p>
-            </div>
-            <div id="info-web" class="category-info">
-                <h3>Páginas Web Profesionales</h3>
-                <p>Potencia tu marca o negocio con un sitio web de alto impacto. Creamos desde Landing Pages optimizadas para conversión hasta E-commerce elegantes y funcionales. Diseños adaptables a móviles, rápidos y con una estética premium que garantiza el impacto visual.</p>
-            </div>
-        </div>
-
-        <div class="product-grid" id="product-grid">
-            <!-- Invitaciones -->
-            <div class="card model-card" data-category="invitacion">
-                <div class="card-image-container">
-                    <img class="card-image" src="img/BasicoTJ.png" alt="Básica">
-                </div>
-                <div class="card-body">
-                    <h3>Invitación Básica</h3>
-                    <p>Esencial y elegante. Perfecta para eventos directos y sofisticados.</p>
-                    <a class="btn-text" href="https://invbasica.netlify.app/" target="_blank">Ver demo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-
-            <div class="card model-card featured" data-category="invitacion">
-                <div class="label-featured">Más Popular</div>
-                <div class="card-image-container">
-                    <img class="card-image" src="img/Premium.png" alt="Premium">
-                </div>
-                <div class="card-body">
-                    <h3>Invitación Premium</h3>
-                    <p>Experiencia completa con música, galería y cuenta regresiva.</p>
-                    <a class="btn-text" href="https://invpremium.netlify.app/" target="_blank">Ver demo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-
-            <div class="card model-card" data-category="invitacion">
-                <div class="card-image-container">
-                    <img class="card-image" src="img/Gold.png" alt="Gold">
-                </div>
-                <div class="card-body">
-                    <h3>Invitación Gold</h3>
-                    <p>El máximo nivel de detalle y animaciones exclusivas para tu gran día.</p>
-                    <a class="btn-text" href="https://invgold.netlify.app/" target="_blank">Ver demo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-
-            <!-- Románticas -->
-            <div class="card model-card" data-category="romantica">
-                <div class="card-image-container">
-                    <img class="card-image" src="img/Carta De amor.png" alt="Romántica 1">
-                </div>
-                <div class="card-body">
-                    <h3>Carta de Amor Digital</h3>
-                    <p>Un detalle inolvidable. Galería de sus mejores momentos y mensaje especial.</p>
-                    <a class="btn-text" href="https://castillocris.github.io/CartaDeAmor/" target="_blank">Ver ejemplo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-
-            <div class="card model-card" data-category="romantica">
-                <div class="card-image-container">
-                    <img class="card-image" src="img/Carrusel imagenes.png" alt="Romántica 2">
-                </div>
-                <div class="card-body">
-                    <h3>Galeria de Momentos</h3>
-                    <p>Celebra su historia con una línea de tiempo interactiva y su canción favorita.</p>
-                    <a class="btn-text" href="https://castillocris.github.io/Galeria-en-rotacion/" target="_blank">Ver ejemplo <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-
-            <!-- Web -->
-            <div class="card web-card" data-category="web">
-                <div class="card-image-container">
-                    <img class="card-image" src="img/IronZone.png" alt="Iron Zone">
-                </div>
-                <div class="card-body">
-                    <h3>Landing Page Pro</h3>
-                    <p>Diseño de alto impacto para gimnasios y marcas personales.</p>
-                    <a class="btn-text" href="https://castillocris.github.io/Gimnacio/" target="_blank">Ver sitio <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-
-            <div class="card web-card" data-category="web">
-                <div class="card-image-container">
-                    <img class="card-image" src="img/ClubDelAsado.png" alt="Club del Asado">
-                </div>
-                <div class="card-body">
-                    <h3>E-commerce Gourmet</h3>
-                    <p>Plataforma elegante para productos premium con sistema de pedidos.</p>
-                    <a class="btn-text" href="https://castillocris.github.io/El-Club-del-Asado/" target="_blank">Ver sitio <i class='bx bx-right-arrow-alt'></i></a>
-                </div>
-            </div>
-        </div>
+    <section id="inv" class="section" style="padding-top:10px;">
+      <div class="section-header">
+        <h2>Invitaciones digitales</h2>
+        <p>Interactivas, con animación y foco total en móvil.</p>
+      </div>
+      <div class="grid pricing-grid">
+        <article class="card pricing-card">
+          <img class="pricing-img" src="img/Carta De amor.png" alt="Carta de amor interactiva" loading="lazy" />
+          <div>
+            <h3 style="margin:10px 0 6px;">Carta / Story romántica</h3>
+            <p class="muted" style="margin:0;">Ideal para regalos y fechas especiales.</p>
+          </div>
+        </article>
+        <article class="card pricing-card">
+          <img class="pricing-img" src="img/Carrusel imagenes.png" alt="Invitación con carrusel" loading="lazy" />
+          <div>
+            <h3 style="margin:10px 0 6px;">Carrusel + stickers</h3>
+            <p class="muted" style="margin:0;">Álbum, fotos y detalles en scroll.</p>
+          </div>
+        </article>
+        <article class="card pricing-card">
+          <img class="pricing-img" src="img/BasicoTJ.png" alt="Invitación básica" loading="lazy" />
+          <div>
+            <h3 style="margin:10px 0 6px;">Básico elegante</h3>
+            <p class="muted" style="margin:0;">Simple, lindo y directo.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <footer style="margin-top: 100px;">
-        <div class="footer-content">
-            <p>&copy; 2026 Lumina Creaciones. Todos los derechos reservados.</p>
-            <div class="socials">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-            </div>
-        </div>
-    </footer>
+    <section id="webs" class="section">
+      <div class="section-header">
+        <h2>Webs personalizadas</h2>
+        <p>Landing pages y sitios que explican tu oferta en segundos.</p>
+      </div>
+      <div class="grid pricing-grid">
+        <article class="card pricing-card">
+          <img class="pricing-img" src="img/IronZone.png" alt="Web Iron Zone" loading="lazy" />
+          <div>
+            <h3 style="margin:10px 0 6px;">Iron Zone</h3>
+            <p class="muted" style="margin:0;">Presentación + CTA a WhatsApp.</p>
+          </div>
+        </article>
+        <article class="card pricing-card">
+          <img class="pricing-img" src="img/ClubDelAsado.png" alt="Web Club del Asado" loading="lazy" />
+          <div>
+            <h3 style="margin:10px 0 6px;">Club del Asado</h3>
+            <p class="muted" style="margin:0;">Visual fuerte + secciones claras.</p>
+          </div>
+        </article>
+        <article class="card pricing-card">
+          <img class="pricing-img" src="img/Tienda Nancy.png" alt="Web Tienda Nancy" loading="lazy" />
+          <div>
+            <h3 style="margin:10px 0 6px;">Tienda Nancy</h3>
+            <p class="muted" style="margin:0;">Catálogo + productos destacados.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <!-- Lenis for Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
-    <script src="js/animations.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const filters = document.querySelectorAll('.filter-btn');
-            const cards = document.querySelectorAll('.card');
-            const infoBlocks = document.querySelectorAll('.category-info');
+    <section id="edi" class="section">
+      <div class="section-header">
+        <h2>Edición & contenido</h2>
+        <p>Retoque, recortes, animaciones y piezas listas para redes.</p>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+        <article class="card">
+          <h3 style="margin:0 0 10px;">Edición de fotos</h3>
+          <p class="muted" style="margin:0 0 12px;">Fondos cálidos, limpieza, estilo consistente para tu marca.</p>
+          <img class="pricing-img" src="img/lumina2.png" alt="Edición de imágenes" loading="lazy" />
+        </article>
+        <article class="card">
+          <h3 style="margin:0 0 10px;">Edición de video</h3>
+          <p class="muted" style="margin:0 0 12px;">Reels, stories, anuncios y contenido corto con ritmo.</p>
+          <img class="pricing-img" src="img/lumina.png" alt="Edición de video" loading="lazy" />
+        </article>
+      </div>
+    </section>
 
-            filters.forEach(filter => {
-                filter.addEventListener('click', () => {
-                    // Update active button
-                    filters.forEach(f => f.classList.remove('active'));
-                    filter.classList.add('active');
+    <div class="section-header" style="margin-top:18px;">
+      <a class="btn btn-outline" href="index.html#inicio"><i class="bx bx-left-arrow-alt"></i> Volver al inicio</a>
+    </div>
+  </main>
 
-                    const category = filter.getAttribute('data-filter');
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lúmina. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-                    // Update category info visibility
-                    infoBlocks.forEach(info => {
-                        if (info.id === `info-${category}`) {
-                            gsap.to(info, {
-                                display: 'block',
-                                opacity: 1,
-                                y: 0,
-                                duration: 0.5,
-                                ease: 'power2.out'
-                            });
-                        } else {
-                            gsap.to(info, {
-                                display: 'none',
-                                opacity: 0,
-                                y: 10,
-                                duration: 0.3,
-                                ease: 'power2.in'
-                            });
-                        }
-                    });
-
-                    cards.forEach(card => {
-                        const cardCategory = card.getAttribute('data-category');
-                        
-                        if (category === 'all' || category === cardCategory) {
-                            gsap.to(card, {
-                                display: 'flex',
-                                opacity: 1,
-                                scale: 1,
-                                duration: 0.4,
-                                ease: 'power2.out'
-                            });
-                        } else {
-                            gsap.to(card, {
-                                display: 'none',
-                                opacity: 0,
-                                scale: 0.8,
-                                duration: 0.4,
-                                ease: 'power2.in'
-                            });
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
