@@ -22,7 +22,12 @@
       <img src="img/lumina.png" alt="Lúmina" class="brand-logo" />
       <span class="brand-name">Lúmina</span>
     </a>
-    <div class="menu" style="position: static; transform:none; opacity:1; pointer-events:auto; border:none; background:transparent; padding:0;">
+    
+    <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
+      <i class="bx bx-menu"></i>
+    </button>
+
+    <div id="menu" class="menu" role="navigation" aria-label="Menú principal">
       <ul>
         <li><a class="nav-link" href="index.html#invitaciones">Invitaciones</a></li>
         <li><a class="nav-link" href="index.html#webs">Webs</a></li>
@@ -50,25 +55,34 @@
         <p>Interactivas, con animación y foco total en móvil.</p>
       </div>
       <div class="grid pricing-grid">
-        <article class="card pricing-card">
-          <img class="pricing-img" src="img/Carta De amor.png" alt="Carta de amor interactiva" loading="lazy" />
-          <div>
-            <h3 style="margin:10px 0 6px;">Carta / Story romántica</h3>
-            <p class="muted" style="margin:0;">Ideal para regalos y fechas especiales.</p>
-          </div>
-        </article>
-        <article class="card pricing-card">
-          <img class="pricing-img" src="img/Carrusel imagenes.png" alt="Invitación con carrusel" loading="lazy" />
-          <div>
-            <h3 style="margin:10px 0 6px;">Carrusel + stickers</h3>
-            <p class="muted" style="margin:0;">Álbum, fotos y detalles en scroll.</p>
-          </div>
-        </article>
-        <article class="card pricing-card">
+        <article class="card pricing-card magnetic">
           <img class="pricing-img" src="img/BasicoTJ.png" alt="Invitación básica" loading="lazy" />
-          <div>
-            <h3 style="margin:10px 0 6px;">Básico elegante</h3>
-            <p class="muted" style="margin:0;">Simple, lindo y directo.</p>
+          <div class="card-content">
+            <div>
+              <h3>Invitación básica</h3>
+              <p class="muted">Ideal para regalos y fechas especiales.</p>
+            </div>
+            <a class="btn btn-primary" href="https://castillocris.github.io/Tarjetas-de-inivitacion---Basica/" target="_blank" rel="noopener noreferrer">Consultar</a>
+          </div>
+        </article>
+        <article class="card pricing-card magnetic">
+          <img class="pricing-img" src="img/Premium.png" alt="Invitación premium" loading="lazy" />
+          <div class="card-content">
+            <div>
+              <h3>Invitación premium</h3>
+              <p class="muted">Diseño personalizado y más funcionalidades.</p>
+            </div>
+            <a class="btn btn-primary" href="https://castillocris.github.io/Tarjetas-de-inivitacion---Premium/" target="_blank" rel="noopener noreferrer">Consultar</a>
+          </div>
+        </article>
+        <article class="card pricing-card magnetic">
+          <img class="pricing-img" src="img/Gold.png" alt="Invitación gold" loading="lazy" />
+          <div class="card-content">
+            <div>
+              <h3>Invitación gold</h3>
+              <p class="muted">Diseño premium y más funcionalidades.</p>
+            </div>
+            <a class="btn btn-primary" href="https://castillocris.github.io/Tarjetas-de-inivitacion---Gold/" target="_blank" rel="noopener noreferrer">Consultar</a>
           </div>
         </article>
       </div>
@@ -80,25 +94,34 @@
         <p>Landing pages y sitios que explican tu oferta en segundos.</p>
       </div>
       <div class="grid pricing-grid">
-        <article class="card pricing-card">
+        <article class="card pricing-card magnetic">
           <img class="pricing-img" src="img/IronZone.png" alt="Web Iron Zone" loading="lazy" />
-          <div>
-            <h3 style="margin:10px 0 6px;">Iron Zone</h3>
-            <p class="muted" style="margin:0;">Presentación + CTA a WhatsApp.</p>
+          <div class="card-content">
+            <div>
+              <h3>Iron Zone</h3>
+              <p class="muted">Presentación + CTA a WhatsApp.</p>
+            </div>
+            <a class="btn btn-primary" href="https://castillocris.github.io/Gimnacio/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
           </div>
         </article>
-        <article class="card pricing-card">
+        <article class="card pricing-card magnetic">
           <img class="pricing-img" src="img/ClubDelAsado.png" alt="Web Club del Asado" loading="lazy" />
-          <div>
-            <h3 style="margin:10px 0 6px;">Club del Asado</h3>
-            <p class="muted" style="margin:0;">Visual fuerte + secciones claras.</p>
+          <div class="card-content">
+            <div>
+              <h3>Club del Asado</h3>
+              <p class="muted">Visual fuerte + secciones claras.</p>
+            </div>
+            <a class="btn btn-primary" href="https://castillocris.github.io/El-Club-del-Asado/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
           </div>
         </article>
-        <article class="card pricing-card">
+        <article class="card pricing-card magnetic">
           <img class="pricing-img" src="img/Tienda Nancy.png" alt="Web Tienda Nancy" loading="lazy" />
-          <div>
-            <h3 style="margin:10px 0 6px;">Tienda Nancy</h3>
-            <p class="muted" style="margin:0;">Catálogo + productos destacados.</p>
+          <div class="card-content">
+            <div>
+              <h3>Tienda Nancy</h3>
+              <p class="muted">Catálogo y pedidos online.</p>
+            </div>
+            <a class="btn btn-primary" href="https://castillocris.github.io/Tienda-Nancy/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
           </div>
         </article>
       </div>
@@ -110,21 +133,23 @@
         <p>Retoque, recortes, animaciones y piezas listas para redes.</p>
       </div>
       <div class="grid" style="grid-template-columns: repeat(2, minmax(0,1fr));">
-        <article class="card">
-          <h3 style="margin:0 0 10px;">Edición de fotos</h3>
-          <p class="muted" style="margin:0 0 12px;">Fondos cálidos, limpieza, estilo consistente para tu marca.</p>
-          <img class="pricing-img" src="img/lumina2.png" alt="Edición de imágenes" loading="lazy" />
+        <article class="card pricing-card magnetic">
+          <h3>Edición de fotos</h3>
+          <p class="muted">Fondos cálidos, limpieza, estilo consistente para tu marca.</p>
+          <img class="pricing-img pricing-img--spaced" src="img/lumina2.png" alt="Edición de imágenes" loading="lazy" />
+          <a class="btn btn-primary" href="https://wa.me/5493757322079" target="_blank" rel="noopener noreferrer">Consultar</a>
         </article>
-        <article class="card">
-          <h3 style="margin:0 0 10px;">Edición de video</h3>
-          <p class="muted" style="margin:0 0 12px;">Reels, stories, anuncios y contenido corto con ritmo.</p>
-          <img class="pricing-img" src="img/lumina.png" alt="Edición de video" loading="lazy" />
+        <article class="card pricing-card magnetic">
+          <h3>Edición de video</h3>
+          <p class="muted">Reels, stories, anuncios y contenido corto con ritmo.</p>
+          <img class="pricing-img pricing-img--spaced" src="img/lumina.png" alt="Edición de video" loading="lazy" />
+          <a class="btn btn-primary" href="https://wa.me/5493757322079" target="_blank" rel="noopener noreferrer">Consultar</a>
         </article>
       </div>
     </section>
 
     <div class="section-header" style="margin-top:18px;">
-      <a class="btn btn-outline" href="index.html#inicio"><i class="bx bx-left-arrow-alt"></i> Volver al inicio</a>
+      <a class="btn btn-outline magnetic" href="index.html#inicio"><i class="bx bx-left-arrow-alt"></i> Volver al inicio</a>
     </div>
   </main>
 

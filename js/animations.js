@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         initChapterScrollSync(prefersReduced, chapterOverlayState);
         initCanvasOverlay(prefersReduced, lowEnd, chapterOverlayState);
         initMagneticButtons(prefersReduced, lowEnd);
-        initStoryReel(prefersReduced, lowEnd);
       }
     });
 
@@ -162,10 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .fromTo(media, { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45 }, 0.12);
 
       if (stack) {
-        tl.fromTo(
-          stack.children,
-          { y: 20, opacity: 0, rotate: 1 },
-          { y: 0, opacity: 1, rotate: 0, stagger: 0.08, duration: 0.35 },
+        tl.fromTo(stack.children, 
+          { y: 40, opacity: 0, rotate: (i) => i === 0 ? -15 : 12, x: (i) => i === 0 ? -20 : 20 }, 
+          { y: 0, opacity: 1, rotate: (i) => i === 0 ? -8 : 6, x: 0, stagger: 0.15, duration: 0.6, ease: 'back.out(1.7)' }, 
           0.2
         );
       }
@@ -402,67 +400,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('mousemove', onMove);
       btn.addEventListener('mouseleave', reset);
     });
-  }
-
-  function initStoryReel(prefersReduced, lowEnd) {
-    const section = document.getElementById('showreel');
-    if (!section) return;
-    if (prefersReduced || lowEnd) {
-      const first = section.querySelector('.story-slide');
-      if (first) first.classList.add('story-slide--active');
-      return;
-    }
-
-    const slides = gsap.utils.toArray('.story-slide');
-    const dots = gsap.utils.toArray('.story-dot');
-    if (!slides.length) return;
-
-    let currentIndex = 0;
-
-    function activate(index) {
-      currentIndex = index;
-      slides.forEach((slide, i) => {
-        const isActive = i === index;
-        slide.classList.toggle('story-slide--active', isActive);
-        gsap.to(slide, {
-          opacity: isActive ? 1 : 0,
-          x: isActive ? 0 : 16,
-          scale: isActive ? 1 : 0.97,
-          duration: 0.5,
-          ease: 'power3.out'
-        });
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('story-dot--active', i === index);
-      });
-    }
-
-    ScrollTrigger.create({
-      trigger: section,
-      start: 'top center',
-      end: '+=140%',
-      pin: true,
-      scrub: 0.8,
-      onUpdate(self) {
-        const p = self.progress;
-        const index = Math.min(slides.length - 1, Math.floor(p * slides.length + 0.001));
-        if (index !== currentIndex) {
-          activate(index);
-        }
-      }
-    });
-
-    const cta = section.querySelector('[data-story-cta]');
-    if (cta) {
-      cta.addEventListener('click', () => {
-        const target = document.getElementById('contacto');
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          window.open('https://wa.me/5493757322079', '_blank', 'noopener');
-        }
-      });
-    }
   }
 
   function initReducedMotionHandling() {
