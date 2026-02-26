@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
+  // Global ScrollTrigger config for performance
+  ScrollTrigger.config({
+    limitCallbacks: true,
+    ignoreMobileResize: true,
+    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load"
+  });
+
   const motion = initReducedMotionHandling();
   const prefersReduced = motion.prefersReduced;
   const lowEnd = motion.lowEnd;
@@ -148,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
           trigger: chapter,
           start: 'top top',
           end: '+=120%',
-          scrub: 0.8,
+          scrub: 0.6, // Slightly faster scrub for mobile performance
           onUpdate(self) {
             if (!chapterOverlayState) return;
             chapterOverlayState.mode = chapter.id || 'none';
@@ -430,9 +437,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     lenis.on('scroll', ScrollTrigger.update);
+    
+    // Performance: Throttle RAF calls
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });
+    
+    // Disable lagSmoothing to prevent "jumps" during heavy scroll
     gsap.ticker.lagSmoothing(0);
     return lenis;
   }

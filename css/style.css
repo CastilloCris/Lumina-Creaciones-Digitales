@@ -149,6 +149,23 @@ strong{font-weight:800}
   object-fit:cover;
   transform: scale(1.02);
   filter: contrast(1.05) saturate(1.05);
+  will-change: transform;
+}
+
+/* Optimization for smooth scroll and performance */
+.chapter, .section, .card, .btn, .media-frame, .fx-canvas {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+}
+
+.fx-canvas {
+  will-change: opacity;
+}
+
+.card {
+  will-change: transform, box-shadow;
 }
 .hero-overlay{
   position:absolute; inset:0;
